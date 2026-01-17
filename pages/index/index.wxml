@@ -1,0 +1,63 @@
+<!--pages/index/index.wxml-->
+<view class="container">
+  <view class="header">
+    <image class="logo" src="/images/logo.png" mode="aspectFit"></image>
+    <text class="title">欢迎使用民杰云营</text>
+  </view>
+
+  <view class="content">
+    <view class="card">
+      <view class="card-title">快速开始</view>
+      <view class="card-desc">这是一个微信小程序开发模板</view>
+
+      <view class="feature-list">
+        <view class="feature-item">
+          <text class="feature-icon">✓</text>
+          <text class="feature-text">完整的项目结构</text>
+        </view>
+        <view class="feature-item">
+          <text class="feature-icon">✓</text>
+          <text class="feature-text">常用工具函数</text>
+        </view>
+        <view class="feature-item">
+          <text class="feature-icon">✓</text>
+          <text class="feature-text">示例页面和组件</text>
+        </view>
+        <view class="feature-item">
+          <text class="feature-icon">✓</text>
+          <text class="feature-text">规范的代码风格</text>
+        </view>
+      </view>
+    </view>
+
+    <view class="card">
+      <view class="card-title">用户信息</view>
+      <view class="user-info" wx:if="{{hasUserInfo}}">
+        <image class="user-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+        <text class="user-name">{{userInfo.nickName}}</text>
+      </view>
+      <button wx:else class="btn btn-primary" bindtap="getUserProfile">
+        获取用户信息
+      </button>
+    </view>
+
+    <view class="card">
+      <view class="card-title">快捷操作</view>
+      <view class="action-list">
+        <button class="btn btn-secondary" bindtap="navigateToLogs">
+          查看日志
+        </button>
+        <button class="btn btn-warning" bindtap="showToast">
+          显示提示
+        </button>
+        <button class="btn btn-primary" bindtap="makeRequest">
+          测试请求
+        </button>
+      </view>
+    </view>
+  </view>
+
+  <view class="footer">
+    <text class="footer-text">民杰云营 © 2026</text>
+  </view>
+</view>

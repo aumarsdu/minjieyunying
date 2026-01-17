@@ -1,0 +1,131 @@
+/* pages/logs/logs.wxss */
+.container {
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  padding: 0;
+}
+
+.page-header {
+  padding: 60rpx 40rpx 40rpx;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #fff;
+}
+
+.page-title {
+  display: block;
+  font-size: 48rpx;
+  font-weight: bold;
+  margin-bottom: 15rpx;
+}
+
+.page-desc {
+  display: block;
+  font-size: 28rpx;
+  opacity: 0.9;
+}
+
+.logs-content {
+  padding: 20rpx;
+  min-height: calc(100vh - 300rpx);
+}
+
+.log-item {
+  background: #fff;
+  border-radius: 12rpx;
+  padding: 30rpx;
+  margin-bottom: 15rpx;
+  box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.log-item:active {
+  transform: scale(0.98);
+  box-shadow: 0 1rpx 4rpx rgba(0, 0, 0, 0.1);
+}
+
+.log-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.log-index {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50rpx;
+  height: 50rpx;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #fff;
+  border-radius: 50%;
+  font-size: 24rpx;
+  font-weight: bold;
+}
+
+.log-time {
+  flex: 1;
+  margin-left: 20rpx;
+  font-size: 28rpx;
+  color: #333;
+}
+
+.log-divider {
+  height: 1rpx;
+  background: #f0f0f0;
+  margin-top: 20rpx;
+}
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 120rpx 40rpx;
+  text-align: center;
+}
+
+.empty-icon {
+  font-size: 120rpx;
+  margin-bottom: 30rpx;
+}
+
+.empty-text {
+  font-size: 32rpx;
+  color: #999;
+}
+
+.action-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  gap: 20rpx;
+  padding: 20rpx;
+  background: #fff;
+  border-top: 1rpx solid #e5e5e5;
+  box-shadow: 0 -2rpx 8rpx rgba(0, 0, 0, 0.05);
+}
+
+.btn {
+  flex: 1;
+  margin: 0;
+  padding: 25rpx;
+  border-radius: 10rpx;
+  font-size: 30rpx;
+  border: none;
+}
+
+.btn::after {
+  border: none;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #fff;
+}
+
+.btn-danger {
+  background: linear-gradient(135deg, #f44336 0%, #d32f2f 100%);
+  color: #fff;
+}

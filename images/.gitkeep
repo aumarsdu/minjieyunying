@@ -1,0 +1,15 @@
+# 图片资源目录
+
+此目录用于存放小程序中使用的图片资源。
+
+建议的图片资源:
+- logo.png - 应用Logo
+- home.png - 首页Tab图标
+- home-active.png - 首页Tab选中图标
+- logs.png - 日志Tab图标
+- logs-active.png - 日志Tab选中图标
+
+注意事项:
+- 建议使用压缩后的图片以减小包体积
+- TabBar 图标建议尺寸: 81px * 81px
+- Logo 建议尺寸: 200px * 200px 或更大
