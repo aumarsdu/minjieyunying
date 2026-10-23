@@ -111,7 +111,8 @@ Page({
    * 跳转到日志页面
    */
   navigateToLogs() {
-    wx.navigateTo({
+    // 日志页在 tabBar 中，navigateTo 无法跳转 tabBar 页面，必须用 switchTab
+    wx.switchTab({
       url: '/pages/logs/logs'
     })
   },
