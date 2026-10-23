@@ -1,0 +1,11 @@
+{
+  "name": "minjieyunying-e2e",
+  "private": true,
+  "description": "民杰云营小程序端到端测试（miniprogram-automator + 微信开发者工具）",
+  "scripts": {
+    "test": "node --test --test-concurrency=1 --test-timeout=180000 flows.test.js"
+  },
+  "devDependencies": {
+    "miniprogram-automator": "0.13.0"
+  }
+}

@@ -67,6 +67,25 @@ const BASE_URL = 'https://your-api-domain.com'
 
 在微信开发者工具中点击"编译"按钮即可运行。
 
+## 端到端测试
+
+`tests/e2e/` 是独立的 Node 测试工程（`miniprogram-automator` + Node 内置 `node:test`），覆盖首页渲染、tabBar 切换、获取用户信息成功/失败、提示、测试请求成功/失败、跳转日志页、日志增删与 50 条上限。所有 `wx` 网络/授权/弹窗调用都在测试内 mock，不出网。
+
+前提：
+
+- 已安装并登录微信开发者工具（命令行可用 `wechatide`）
+- `project.config.json` 的 `appid` 为当前登录账号有权限的 AppID（可用测试号）；`touristappid` 无法被自动化打开
+
+运行：
+
+```bash
+cd tests/e2e
+npm install
+npm test
+```
+
+用例串行执行，结束时用 `mp.close()` 关闭项目窗口；不要用 `disconnect()` 中断，否则开发者工具的自动化通道会卡住，需要关掉项目窗口再重开。`tests/` 已在 `packOptions.ignore` 中，不会打进小程序包。
+
 ## 工具函数说明
 
 ### util.js - 通用工具函数
